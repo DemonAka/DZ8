@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DZ81
 {
-    
+
 
     internal class Program
     {
@@ -21,13 +18,9 @@ namespace DZ81
                 intList.Add(rng.Next(0, 100));
                 check++;
             } while (check < 100);
-            //for (int i = 0; i < 100; i++)
-            //{
-            //    intList.Add(rng.Next(0,100));
-            //}
             return intList;
         }
-      
+
         static void PrintList(List<int> example)
         {
             List<int> intList = example;
