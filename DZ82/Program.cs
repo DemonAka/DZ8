@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DZ82
 {
     internal class Program
     {
-        
-        static Dictionary<string, string> AddPhone ()
+
+        static Dictionary<string, string> AddPhone()
         {
             char key = 'д';
             Dictionary<string, string> phoneNumber = new Dictionary<string, string>();
@@ -32,15 +29,15 @@ namespace DZ82
             foreach (KeyValuePair<string, string> e in phoneNumber) Console.WriteLine($"\n{e} ");
         }
 
-        static void SerchPhone (Dictionary<string, string> phoneNumber)
+        static void SerchPhone(Dictionary<string, string> phoneNumber)
         {
             Console.WriteLine("Введите номер телефона, который вы хотите найти:");
             string findPhone = Console.ReadLine();
             string valuePhone = "";
-            
 
-            
-            if(phoneNumber.TryGetValue(findPhone, out valuePhone))
+
+
+            if (phoneNumber.TryGetValue(findPhone, out valuePhone))
             {
                 Console.WriteLine($"Номер телефона: {findPhone} ФИО: {valuePhone}");
             }
@@ -60,10 +57,10 @@ namespace DZ82
             //}
             //if (count == 0) { Console.WriteLine("Данного номера не существует"); }
         }
-        
+
         static void Main(string[] args)
         {
-            
+
             Dictionary<string, string> phoneNumber = AddPhone();
             //PrintDictionary(phoneNumber);
             Console.ReadKey();

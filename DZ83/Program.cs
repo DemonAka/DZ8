@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DZ83
 {
@@ -17,16 +14,16 @@ namespace DZ83
                 Console.WriteLine("\nВведите число, которое хотите добавить в Hash :");
 
                 int number = Convert.ToInt32(Console.ReadLine());
-          
-                    if (hashInt.Contains(number))
-                    {
+
+                if (hashInt.Contains(number))
+                {
                     Console.WriteLine("Данное число, уже существует в Hash");
-                    }
-                    else
-                    {
-                        hashInt.Add(number);
-                        Console.WriteLine($"Число {number} успешно добавлено в коллекцию");
-                    }
+                }
+                else
+                {
+                    hashInt.Add(number);
+                    Console.WriteLine($"Число {number} успешно добавлено в коллекцию");
+                }
 
                 Console.Write("\nПродожить н/д"); key = Console.ReadKey(true).KeyChar;
             } while (char.ToLower(key) == 'д');
